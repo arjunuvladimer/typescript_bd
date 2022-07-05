@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function first(){
+                    setTimeout(() => {return 10}, 2000)
+                }
+                function second(value){
+                    return value
+                }
+                function third(value){
+                    return value
+                }
+                function doManyThings(){
+                    let result1 = first()
+                    let result2 = second(result1)
+                    let result3 = third(result2)
+                    let finalResult = result3
+                    return finalResult
+                }
+                // Event Queue: doManyThing()
+                // CallStack: doManyThings() => third() => second() => first()
+                console.log(doManyThings())
+        </script>
+    </head>
+    
+</html>
