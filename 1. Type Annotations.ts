@@ -1,3 +1,4 @@
+
 // Type Annotations in Variables
 // let variableName: type; // Declaration 
 // let variableName: type = value // Definition
@@ -9,6 +10,9 @@ let b:string = `Hello World  ${a}`
 console.log(b)
 // "", '', ``[//Template Literals]
 let c: boolean = true
+let dj:any = null // intentional abesnce of memory
+let dk:any = undefined // define in the future
+
 // Non -Primitive Datatypes
 // Structured Data
 let arrayName:(string | number)[] = [1,1, "2"]
@@ -20,6 +24,7 @@ let person: {
     fname:"Arjun",
     id:123
 }
+
 // object vs Object
 class ES6{
     add(){
@@ -82,7 +87,14 @@ var active:boolean = true
 if(active){
     var check:number = 11
 }
-console.log(check)
+// Call the variable
+console.log(hoistedVariable)
+
+// Declaring the variable
+var hoistedVariable
+
+
+
 
 
 // Scoping of Variables
@@ -101,7 +113,13 @@ function subtract(){
 { // Object, Blocks
 
     let f:number = 124
+    let dsfjk
+    dsfjk  = 12312
+    const jk:number = 123
 }
+
+
+
 
 // 4. Lexical Scope
 var g:number = 10
@@ -110,7 +128,7 @@ function check1(){
    
     console.log(g)
     function check2(){
-        
+   
         console.log(g)
     }
     check2()

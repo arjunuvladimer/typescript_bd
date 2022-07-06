@@ -1,4 +1,4 @@
- interface Check{
+ export interface Check{
     name: string
 }
 
@@ -6,8 +6,8 @@ interface Check1{
     id: number
 }
 
- interface Check2{
+ export interface Check2{
     lname: string
 }
 var a = 10
-export {a}
+export default Check1

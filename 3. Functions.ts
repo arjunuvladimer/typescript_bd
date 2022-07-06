@@ -17,8 +17,8 @@ let subtract: (c:number, d:number) => number
 function defaultFunctionParameters(a,b = 100){
     return a*b
 }
-
-let result = defaultFunctionParameters(10)
+let kjdf = 123
+let result = defaultFunctionParameters(kjdf,323)
 
 console.log(result)
 
@@ -43,7 +43,7 @@ console.log(factorial(5))
 // Rest Parameterized Functions
 
 function restParameterizedFunction(...oneIdentity){
-    console.log(...oneIdentity)
+    console.log(...oneIdentity) // spread operator
 }
 restParameterizedFunction(1,2,3,4,5)
 

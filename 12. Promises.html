@@ -2,20 +2,23 @@
 <html>
     <head>
         <script>
-                function first(){
-                    setTimeout(() => {return 10}, 2000)
+                async function first(){
+                    setTimeout(()=> {
+                        console.log("Hello World")
+                    }, 2000)
+                    return 10
                 }
-                function second(value){
+                async function second(value){
                     return value
                 }
-                function third(value){
+                async function third(value){
                     return value
                 }
-                function doManyThings(){
-                    let result1 = first()
-                    let result2 = second(result1)
-                    let result3 = third(result2)
-                    let finalResult = result3
+                async function doManyThings(){
+                    let result1 = await first() // JS doesn't wait for first
+                    let result2 = await second(result1)
+                    let result3 = await third(result2)
+                    let finalResult = await result3
                     return finalResult
                 }
                 // Event Queue: doManyThing()
